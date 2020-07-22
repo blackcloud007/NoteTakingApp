@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">NoteMakingApp</string>
+    <string name="app_name">STULTUS</string>
+    <string name="title_activity_note_details">NoteDetails</string>
+    <string name="title_activity_add_note">AddNotes</string>
 </resources>
