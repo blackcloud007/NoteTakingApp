@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/newtitle"
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -63,12 +63,12 @@
         android:id="@+id/priority"
         android:layout_width="50dp"
         android:layout_height="30dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginLeft="21dp"
         android:layout_marginBottom="12dp"
         android:background="#EEFF41"
         app:layout_constraintBottom_toTopOf="@+id/newcontent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/newtitle" />
+        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintStart_toEndOf="@+id/newtitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.888" />
 </androidx.constraintlayout.widget.ConstraintLayout>

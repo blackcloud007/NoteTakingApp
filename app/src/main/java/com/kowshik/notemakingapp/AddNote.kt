@@ -50,6 +50,7 @@ class AddNote : AppCompatActivity() {
             }
            noteViewModel.insert(Note(title.text.toString().trim(),content.text.toString().trim(),priority=priority))
             Toast.makeText(this, "Note added ", Toast.LENGTH_SHORT).show()
+            finish()
         }
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

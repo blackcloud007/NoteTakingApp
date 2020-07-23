@@ -58,6 +58,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
+        app:backgroundTint="#448AFF"
+        app:fabSize="auto"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@drawable/ic_baseline_save_24" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="#448AFF"
+        app:fabSize="auto"
+        app:srcCompat="@drawable/ic_baseline_delete_24" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

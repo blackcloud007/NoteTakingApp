@@ -30,7 +30,7 @@ class NoteDetails : AppCompatActivity() {
         val content=findViewById<TextView>(R.id.noteContent)
         val title:TextView=findViewById(R.id.noteTitle)
         val noteViewModel: NoteViewModel = ViewModelProviders.of(this).get(NoteViewModel::class.java)
-        content.movementMethod=ScrollingMovementMethod()
+        content.movementMethod=ScrollingMovementMethod()//check this out
         title.text=intent.getStringExtra("title")
         content.text=intent.getStringExtra("content")
         val id=intent.getStringExtra("id")
@@ -69,6 +69,24 @@ class NoteDetails : AppCompatActivity() {
             }
             noteViewModel.update(Note(title.text.toString(),content.text.toString(),priority =priority,id = id.toString().toInt()))
             Toast.makeText(this, "Note Updated ", Toast.LENGTH_SHORT).show()
+            finish()
+        }
+        findViewById<FloatingActionButton>(R.id.delete).setOnClickListener { view ->
+            if (TextUtils.isEmpty(title.text)){
+                title.error="Title is empty!!"
+                return@setOnClickListener
+            }
+            if (TextUtils.isEmpty(content.text)){
+                content.error="Content should not be empty"
+                return@setOnClickListener
+            }
+            if (TextUtils.isEmpty(id.toString())){
+                Toast.makeText(this,"ID error +$id ",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            noteViewModel.delete(Note(title.text.toString(),content.text.toString(),priority =priority,id = id.toString().toInt()))
+            Toast.makeText(this, "Note Deleted ", Toast.LENGTH_SHORT).show()
+            finish()
         }
     }
 
